@@ -57,7 +57,7 @@ const Navbar = () => {
       <ul
         className={`${
           toggle ? "flex" : "hidden"
-        } border-2 border-zinc-800 gap-5 text-center rounded-lg shadow-lg capitalize flex flex-col absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform z-10 bg-[#1f1e1e] bg-opacity-80 py-[300px] md:hidden px-[150px]`}
+        } border-2 border-zinc-800 gap-5 text-center rounded-lg shadow-lg capitalize flex flex-col absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform z-10 bg-[#1f1e1e] bg-opacity-80 py-[250px] md:hidden px-[150px]`}
       >
         {menuItem.map((item, i) => (
           <li
