@@ -22,11 +22,11 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="py-2 cursor-pointer bg-[#2A2A2A] flex justify-between px-5 md:px-[15%] shadow-lg">
+    <nav className="py-2 md:py-3 cursor-pointer bg-[#2A2A2A] flex justify-between px-5 md:px-[15%] shadow-lg">
       <div className="logo font-semibold text-white text-4xl name-font">
         C<span className="text-orange-500">W</span>P
       </div>
-      <ul className={"hidden gap-5 capitalize md:flex"}>
+      <ul className={"hidden gap-5 capitalize md:flex items-center"}>
         {menuItem.map((item, i) => (
           <li
             onClick={() => setActive(item.title)}
@@ -57,7 +57,7 @@ const Navbar = () => {
       <ul
         className={`${
           toggle ? "flex" : "hidden"
-        } border-2 border-zinc-800 gap-5 text-center rounded-lg shadow-lg capitalize flex flex-col absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform z-10 bg-[#1f1e1e] bg-opacity-80 py-[250px] md:hidden px-[150px]`}
+        } ease-in-out duration-500 border-2 border-zinc-800 gap-5 text-center rounded-lg shadow-lg capitalize flex flex-col fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform z-10 bg-[#1f1e1e] bg-opacity-80 md:hidden w-[90%] py-[50px]`}
       >
         {menuItem.map((item, i) => (
           <li
