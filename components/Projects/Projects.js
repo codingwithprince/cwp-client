@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
+
+// Import Swiper styles
+import "swiper/css";
+import 'swiper/css/effect-fade';
+// import "swiper/css/effect-fade";
+
+// import required modules
+import { EffectFade, Navigation, Pagination, Autoplay } from "swiper";
 
 const projectList = [
   {
@@ -18,30 +26,33 @@ const Projects = () => {
       <div className="title">
         <h2 className="text-center text-2xl font-bold underline">Projects</h2>
       </div>
-      <div className="images py-10 flex items-center justify-center">
-        <Carousel
-          autoPlay={true}
-          showIndicators={false}
-          showArrows={false}
-          showStatus={false}
-          infiniteLoop={true}
+      <div className="images py-10">
+        <Swiper
+          spaceBetween={30}
+          effect={"fade"}
+          navigation={false}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[EffectFade, Navigation, Pagination, Autoplay]}
+          className="ws"
         >
           {projectList.map((project, i) => (
-            <div key={i} className="flex w-full">
+            <SwiperSlide>
               <Image
                 src={project.url}
                 height={350}
-                width={800}
-                alt="project-list"
+                width={850}
+                alt="Project Image"
               />
-              <div className="description">
-                <p className="title text-2xl font-semibold text-white text-center">
-                  Coming soon!!
-                </p>
-              </div>
-            </div>
+            </SwiperSlide>
           ))}
-        </Carousel>
+        </Swiper>
+        
       </div>
     </div>
   );
