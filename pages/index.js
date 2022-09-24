@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import About from '../components/About'
-import Projects from '../components/Projects'
+import Projects from '../components/Projects/Projects'
 
 export default function Home() {
   return (

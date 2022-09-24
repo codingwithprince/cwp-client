@@ -22,9 +22,13 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="py-2 md:py-3 cursor-pointer bg-[#2A2A2A] flex justify-between px-5 md:px-[15%] shadow-lg">
+    <nav className="py-2 md:py-3 z-10 sticky top-0 cursor-pointer bg-[#2A2A2A] flex justify-between px-5 md:px-[15%] shadow-lg">
       <div className="logo font-semibold text-white text-4xl name-font">
-        C<span className="text-orange-500">W</span>P
+        <Link href={'/'}>
+          <a>
+          C<span className="text-orange-500">W</span>P
+          </a>
+        </Link>
       </div>
       <ul className={"hidden gap-5 capitalize md:flex items-center"}>
         {menuItem.map((item, i) => (
@@ -54,10 +58,13 @@ const Navbar = () => {
           />
         )}
       </div>
+      <div className={`${
+          toggle ? "opacity-100" : "opacity-0"
+        } ease-in-out duration-500 border-2 border-zinc-800 shadow-lg
+        fixed top-[55px] left-0 bg-[#1f1e1e] bg-opacity-80
+        md:hidden w-full h-screen z-10`}>
       <ul
-        className={`${
-          toggle ? "flex" : "hidden"
-        } ease-in-out duration-500 border-2 border-zinc-800 gap-5 text-center rounded-lg shadow-lg capitalize flex flex-col fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform z-10 bg-[#1f1e1e] bg-opacity-80 md:hidden w-[90%] py-[50px]`}
+        className={`capitalize justify-center w-full items-center flex flex-col absolute transform top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`}
       >
         {menuItem.map((item, i) => (
           <li
@@ -68,12 +75,14 @@ const Navbar = () => {
             key={i}
             className={`${
               active == item.title ? "text-orange-500" : "text-white"
-            } text-xl hover:bg-orange-500 hover:text-white font-semibold uppercase`}
+            } text-lg hover:bg-orange-500 w-full text-center hover:text-white font-semibold ease-in-out duration-500 uppercase py-2`}
           >
             <Link href={`#${item.title}`}>{item.title}</Link>
           </li>
         ))}
       </ul>
+      </div>
+     
     </nav>
   );
 };
