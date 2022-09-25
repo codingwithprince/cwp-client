@@ -11,3 +11,6 @@ body{
 .name-font{  
  font-family: 'Iceland', cursive;
 }
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: #f97316 !important;
+}
