@@ -59,12 +59,12 @@ const Navbar = () => {
         )}
       </div>
       <div className={`${
-          toggle ? "opacity-100" : "opacity-0"
+          toggle ? "block" : "hidden"
         } ease-in-out duration-500 border-2 border-zinc-800 shadow-lg
         fixed top-[55px] left-0 bg-[#1f1e1e] bg-opacity-80
         md:hidden w-full h-screen z-10`}>
       <ul
-        className={`capitalize justify-center w-full items-center flex flex-col absolute transform top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`}
+        className={`capitalize justify-center w-full items-center flex flex-col absolute transform top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2`}
       >
         {menuItem.map((item, i) => (
           <li

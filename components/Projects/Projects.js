@@ -50,7 +50,7 @@ const Projects = () => {
   return (
     <div className="text-gray-200 overflow-hidden" id="projects">
       <div className="title">
-        <h2 className="text-center text-2xl font-bold underline">Projects</h2>
+        <h2 className="text-center text-4xl font-bold underline">Projects</h2>
       </div>
       <div className="images py-10">
       <Swiper
@@ -69,10 +69,10 @@ const Projects = () => {
                 width={850}
                 alt="Project Image"
               />
-              {/* <div className="project-info">
-                <h3>{project.title}</h3>
-              </div> */}
-              <p>{project.title}</p>
+              <div className="project-info">
+                <h3 className="title text-zinc-300 tracking-wider text-2xl mb-5">{project.title}</h3>
+                <p className="text-zinc-400">Technologies :</p>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
