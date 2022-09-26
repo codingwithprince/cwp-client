@@ -12,7 +12,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import required modules
-import { Pagination, Navigation } from "swiper";
+import { Pagination, Navigation} from "swiper";
 
 const projectList = [
   {
@@ -21,7 +21,7 @@ const projectList = [
     tech: [
       {
         type: "Next JS",
-        level: 100
+        level: 70
       },
       {
         type: "Tailwind CSS",
@@ -43,7 +43,7 @@ const projectList = [
     tech: [
       {
         type: "Next JS",
-        level: 90
+        level: 60
       },
       {
         type: "CSS",
@@ -77,6 +77,7 @@ const Projects = () => {
         pagination={{
           type: "progressbar",
         }}
+        loop={true}
         navigation={false}
         modules={[Pagination, Navigation]}
         className="mySwiper"
