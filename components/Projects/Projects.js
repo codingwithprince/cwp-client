@@ -3,7 +3,6 @@ import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import SkillBar from 'react-skillbars';
-import ProgressBar from "@ramonak/react-progress-bar";
 
 
 // Import Swiper styles
