@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
+import SkillBar from 'react-skillbars';
 import ProgressBar from "@ramonak/react-progress-bar";
 
 
@@ -19,20 +20,20 @@ const projectList = [
     title: "Jagger Welding d.o.o",
     tech: [
       {
-        name: "Next JS",
-        pgrs: 100
+        type: "Next JS",
+        level: 100
       },
       {
-        name: "Tailwind CSS",
-        pgrs: 100
+        type: "Tailwind CSS",
+        level: 100
       },
       {
-        name: "JavaScript",
-        pgrs: 66
+        type: "JavaScript",
+        level: 66
       },
       {
-        name: "Swiper",
-        pgrs: 10
+        type: "Swiper",
+        level: 10
       }
     ]
   },
@@ -41,26 +42,33 @@ const projectList = [
     title: "Wedding Glory",
     tech: [
       {
-        name: "HTML",
-        pgrs: 70
+        type: "Next JS",
+        level: 90
       },
       {
-        name: "CSS",
-        pgrs: 40
+        type: "CSS",
+        level: 40
       },
       {
-        name: "JavaScript",
-        pgrs: 20
+        type: "JavaScript",
+        level: 20
       },
     ]
   },
 ];
 
-const isBrowser = typeof window !== "undefined";
+
+const CL = {
+  bar: '#f97316',
+  title: {
+    text: '#999',
+    background: 'transparent'
+  }
+}
 
 const Projects = () => {
   return (
-    <div className="text-gray-200 overflow-hidden" id="projects">
+    <div className="text-gray-200  overflow-hidden" id="projects">
       <div className="title">
         <h2 className="text-center text-4xl font-bold underline">Projects</h2>
       </div>
@@ -84,28 +92,7 @@ const Projects = () => {
               <div className="project-info md:w-1/2 w-full mt-10">
                 <h3 className="title text-zinc-300 tracking-wider text-2xl mb-3">{project.title}</h3>
                 <p className="text-zinc-500 text-lg mb-3">Technologies :</p>
-                <table className="table-auto w-full">
-                  <tbody>
-                    {
-                      project.tech && project.tech.map((ptech, i)=> (
-                        <tr>
-                        <td className="pr-5 font-semibold text-zinc-400">{ptech.name}</td>
-                        <td className="w-full">
-                        <ProgressBar 
-                          height="8px"
-                          baseBgColor="#2A2A2A"
-                          bgColor="#f97316"
-                          isLabelVisible={false}
-                          animateOnRender={true} completed={ptech.pgrs} />
-                        </td>
-                      </tr>
-                      ))
-
-                    }
-                  </tbody>
-                </table>
-                
-              
+                <SkillBar colors={CL} skills={project.tech} height={'1vh'} animationDelay={50} />
               </div>
             </SwiperSlide>
           ))}
