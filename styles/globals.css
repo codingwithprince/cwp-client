@@ -18,13 +18,14 @@ body{
 /* skill bar */
 .skillbar{
     background: transparent !important;
+    margin-bottom: 20px !important;
 }
 .skillbar-title span {
     background: transparent !important;
 }
 .skillbar-percent {
-    right: 20px !important;
-    font-size: 8px !important;
+    right: 0px !important;
+    font-size: 11px !important;
 }
 .skillbar-title span {
     padding: 0 !important;

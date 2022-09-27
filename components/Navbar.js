@@ -5,11 +5,15 @@ import { GiCrossedBones } from "react-icons/gi";
 
 const menuItem = [
   {
-    title: "about",
+    title: "home",
     icon: "",
   },
   {
     title: "projects",
+    icon: "",
+  },
+  {
+    title: "expertise",
     icon: "",
   },
   {
@@ -37,7 +41,7 @@ const Navbar = () => {
             key={i}
             className={`${
               active == item.title ? "text-orange-500" : "text-white"
-            } font-semibold uppercase`}
+            } font-semibold hover:text-orange-300 uppercase`}
           >
             <Link href={`#${item.title}`}>{item.title}</Link>
           </li>

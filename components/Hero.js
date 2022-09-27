@@ -7,9 +7,9 @@ import {
   AiFillLinkedin,
 } from "react-icons/ai";
 
-const About = () => {
+const Hero = () => {
   return (
-    <div className="about py-10" id="about">
+    <div className="about pt-10 md:pt-20 " id="home">
       <div className="flex flex-wrap-reverse justify-between items-center">
         <div className="text py-5 cursor-pointer md:w-1/2">
           <p className="text-zinc-400 tracking-wide text-center md:text-left text-xl font-semibold">
@@ -63,4 +63,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Hero;
