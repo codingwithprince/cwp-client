@@ -48,7 +48,7 @@ const Service = () => {
             </h2>
           </div>
           <div className="description">
-            <p className="text-justify text-zinc-500">
+            <p className="text-center text-zinc-500">
               {sItem.description}
             </p>
           </div>
