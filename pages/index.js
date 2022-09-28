@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Expertise from '../components/Expertise'
 import Hero from '../components/Hero'
 import Projects from '../components/Projects/Projects'
+import Service from '../components/Service'
 
 export default function Home() {
   return (
@@ -15,6 +16,8 @@ export default function Home() {
       <main className="md:px-[15%] px-5">
         {/* === About === */}
         <Hero />
+        {/* === Services === */}
+        <Service />
         {/* === Projects === */}
         <Projects />
         {/* === Expertise === */}

@@ -69,7 +69,7 @@ const CL = {
 
 const Projects = () => {
   return (
-    <div className="text-gray-200  overflow-hidden cursor-pointer pt-10" id="projects">
+    <div className="text-gray-200  overflow-hidden cursor-pointer pb-10" id="projects">
       <div className="title">
         <h2 className="text-center text-2xl font-bold underline md:py-20 text-zinc-400">Projects</h2>
       </div>

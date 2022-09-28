@@ -13,6 +13,10 @@ const menuItem = [
     icon: "",
   },
   {
+    title: "services",
+    icon: "",
+  },
+  {
     title: "expertise",
     icon: "",
   },
