@@ -9,7 +9,7 @@ import {
 
 const Hero = () => {
   return (
-    <div className="about pt-10 md:pt-20 " id="home">
+    <div className="about pt-10 md:pt-20 " id="about">
       <div className="flex flex-wrap-reverse justify-between items-center">
         <div className="text py-5 cursor-pointer md:w-1/2">
           <p className="text-zinc-400 tracking-wide text-center md:text-left text-xl font-semibold">
@@ -44,7 +44,7 @@ const Hero = () => {
             />
           </div>
         </div>
-        <div className="image  px-[10%] md:px-0 relative">
+        <div className="image px-[10%] md:px-0 relative">
           <Image
             className="f"
             src={`/images/profile.png`}
@@ -52,6 +52,7 @@ const Hero = () => {
             width={500}
             alt="profile-picture"
           />
+          
           <div className="hidden hover:animate-pulse md:block ease-in-out duration-500 bg-gradient-to-b from-orange-500/50 hover:opacity-100 opacity-0 bg-opacity-50 absolute md:w-full h-full top-0 rounded-full">
             <p className="absolute top-1/2 left-1/2 text-center drop-shadow-xl transform -translate-x-1/2 -translate-y-1/2 text-lg md:text-4xl font-normal text-zinc-50 bg-clip-text">
               I'm just a guy who is very curious about technology

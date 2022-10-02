@@ -28,7 +28,7 @@ const Service = () => {
   return (
     <div
       className="text-gray-200 overflow-hidden cursor-pointer pt-10"
-      id="expertise"
+      id="services"
     >
       <div className="title">
         <h2 className="text-center text-2xl font-bold underline md:py-10 text-zinc-400">
@@ -38,17 +38,18 @@ const Service = () => {
       <div className="services-section gap-5 flex flex-wrap justify-center py-10 w-full">
         {
             service_items.map((sItem, index)=> (
-        <div key={index} className="service-card  w-[300px] ease-in-out duration-300 rounded-md bg-[#2A2A2A] px-5 py-10 shadow-md hover:scale-105 hover:shadow-xl">
+        <div key={index} className="service-card w-[150px]  md:w-[300px] ease-in-out duration-300 rounded-md bg-[#2A2A2A] px-1 md:px-5 py-3 md:py-10 shadow-md hover:scale-105 hover:shadow-xl">
           <div className="logo flex items-center justify-center pb-5">
-            <Image className="opacity-80 hover:opacity-100" src={sItem.logo} height={80} width={80} />
+            <Image className="opacity-60 hover:opacity-80" src={sItem.logo} height={30} width={30} />
+            <Image className="opacity-80 hover:opacity-100" src={sItem.logo} height={60} width={60} />
           </div>
           <div className="title pb-5">
-            <h2 className="text-center text-lg text-orange-500 capitalize font-semibold">
+            <h2 className="text-center text-xs md:text-lg text-orange-500 capitalize font-semibold">
               {sItem.title}
             </h2>
           </div>
-          <div className="description">
-            <p className="text-center text-zinc-500">
+          <div className="description md:block hidden">
+            <p className="text-center text-zinc-400">
               {sItem.description}
             </p>
           </div>

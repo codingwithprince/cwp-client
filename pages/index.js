@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Contact from '../components/Contact'
 import Expertise from '../components/Expertise'
 import Hero from '../components/Hero'
 import Projects from '../components/Projects/Projects'
@@ -22,6 +23,8 @@ export default function Home() {
         <Projects />
         {/* === Expertise === */}
         <Expertise />
+        {/* === Contact === */}
+        <Contact />
       </main>
     </div>
   )
