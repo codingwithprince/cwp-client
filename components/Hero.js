@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import {
-  AiTwotoneMail,
   AiFillGithub,
   AiFillFacebook,
   AiFillLinkedin,
+  AiOutlineCloudDownload
 } from "react-icons/ai";
 
 const Hero = () => {
@@ -26,9 +26,9 @@ const Hero = () => {
             projects with me.
           </p>
           <div className="mt-10 flex items-center gap-3 justify-center md:justify-start">
-            <button className=" text-orange-500 text-sm flex gap-2 items-center  hover:bg-orange-500 hover:text-white ease-in-out duration-300 border-2 border-orange-500/50 rounded-sm px-2 py-1 font-semibold">
-              <AiTwotoneMail size={17} />
-              Inbox Me
+            <button className=" text-orange-500 text-sm flex gap-2 items-center  hover:bg-orange-500 hover:text-white ease-in-out duration-300 border-2 border-orange-500/50 rounded-full px-2 py-1 font-semibold">
+              <AiOutlineCloudDownload size={17} />
+             Download CV
             </button>
             <AiFillGithub
               className="hover:text-zinc-200 text-orange-500"

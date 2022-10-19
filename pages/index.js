@@ -24,7 +24,7 @@ export default function Home() {
         {/* === Expertise === */}
         <Expertise />
         {/* === Contact === */}
-        <Contact />
+        {/* <Contact /> */}
       </main>
     </div>
   )
