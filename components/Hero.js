@@ -18,7 +18,8 @@ const Hero = () => {
           <p className="text-zinc-200 text-6xl text-center md:text-8xl name-font md:text-left font-bold">
             Prince <span className="text-orange-500">Ahmed</span>
           </p>
-          <p className="text-zinc-400 text-justify  md:text-left text-lg tracking-wide">
+          <p className="text-zinc-400 text-center lg:hidden  text-md tracking-wide">Full Stack <span className="text-orange-500 animate-pulse tracking-tight font-semibold">Web</span> Developer</p>
+          <p className="text-zinc-400 text-justify hidden lg:block  md:text-left text-lg tracking-wide">
             A <span className="text-orange-500 animate-pulse tracking-tight font-semibold">MERN</span> Stack Web Developer with 3 years
             of experience. Mostly specialize in <u className="hover:text-orange-400">Next</u>, <u className="hover:text-orange-400">React</u>, <u className="hover:text-orange-400">Express JS</u>, <u className="hover:text-orange-400">MongoDB</u> as well as React Native and Tailwind CSS. I
             use my skills with pure dedication and deliver work on time. If you
